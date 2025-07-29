@@ -84,7 +84,7 @@ After a successful build, you’ll find the compiled plugin binaries in:
 2. Go to **Edit → Plugins**.
 3. Search for **V2V**.
 4. Check the box to enable it.
-5. Restart Unreal when prompted.
+5. Restart Unreal Engine when prompted.
 
 ---
 
@@ -94,7 +94,7 @@ After a successful build, you’ll find the compiled plugin binaries in:
 * In your content drawer, under plugins you should see the V2V and V2V C++ Classes folder.
 
 > 📷 Plugin Verification:
-> ![V2VPlugin](images/V2VPluginContentDrawer.png)
+> ![V2VPlugin](Images/V2VPluginContentDrawer.png)
 
 ---
 
@@ -133,7 +133,7 @@ This setup will guide you how to use the example included in the plugin.
 4. By default the server runs aat 7777 port, if you want to change it you need to change it in **Host Server** node as well as the **Try Activating Upnp** node.
 
 > 📷 Host Server:
-> ![Host Server](images/HostServerNode.png)
+> ![Host Server](Images/HostServerNode.png)
    
 ---
 
@@ -147,7 +147,7 @@ Now you need to hook some events with your gamemode and game instance
 3. In the event graph, hook **OnPostLogin** and **OnLogout** to the ones in **BPC_V2VPlayerSessionController** as shown below:
 
 > 📷 Game Mode Setup:
-> ![Game Mode](images/GameModeSetup.png)
+> ![Game Mode](Images/GameModeSetup.png)
 
 
 ### Game Instance:
@@ -155,7 +155,7 @@ Now you need to hook some events with your gamemode and game instance
 2. In the event graph, add the **Event Shutdown** note, then get actor of class (**BP_Example_ServerConnection**) and from it, call the **OnGameShutdown** event. See the image below:
 
 > 📷 Game Instance Setup:
-> ![Game Instance](images/GameInstanceSetup.png)
+> ![Game Instance](Images/GameInstanceSetup.png)
 
 ---
 
@@ -167,7 +167,7 @@ Now you need to hook some events with your gamemode and game instance
 4. If you're using VR, you'll need to drag & drop **BP_Example_VR_KickPlayerMenu** as well as it uses Ui in world space.
 
 > 📷 Kick Player UI Setup:
-> ![Kick Player UI](images/KickPlayerUI.png)
+> ![Kick Player UI](Images/KickPlayerUI.png)
 
 ---
 
@@ -178,18 +178,18 @@ Now you're ready to play the example.
 2. You should see the following UI 
 
 > 📷 Server Connection UI Host:
-> ![Server Connection UI 1](images/ServerConnectionUI1.png)
+> ![Server Connection UI 1](Images/ServerConnectionUI1.png)
 
 3. Now if you want to use the UPnP, check the Auto Port Forwarding and press Host.
 
 > 📷 Server Connection UI Start Server:
-> ![Server Connection UI 1](images/ServerConnectionUI2.png)
+> ![Server Connection UI 1](Images/ServerConnectionUI2.png)
 
 4. You will see your server IP and next to it the copy button which you can share with you friend.
 5. Click Start Server button to start the server 
 
 > 📷 Server Connection UI Join:
-> ![Server Connection UI 1](images/ServerConnectionUI3.png)
+> ![Server Connection UI 1](Images/ServerConnectionUI3.png)
 
 6. To join simply paste the IP in the first textbox and press join. 
 7. Now you should be in the server together. 
@@ -209,7 +209,7 @@ This section focuses on the usage and explanation of V2V component which is base
 1. Open your desired actor and add the **V2V** component to it.
 
 > 📷 V2V Component:
-> ![V2V Component](images/V2VComponent.png)
+> ![V2V Component](Images/V2VComponent.png)
 
 ---
 
@@ -220,10 +220,10 @@ This section focuses on the usage and explanation of V2V component which is base
 3. The **End Upnp Activation** takes just 1 input i.e. the V2V Component reference and you should call it from something like **Event Shutdown** from game instance. 
 
 > 📷 Try Activating Upnp:
-> ![Try Activating Upnp](images/TryActivatingUpnp.png)
+> ![Try Activating Upnp](Images/TryActivatingUpnp.png)
 
 > 📷 End Upnp Activation:
-> ![End Upnp Activation](images/EndUpnpActivation.png)
+> ![End Upnp Activation](Images/EndUpnpActivation.png)
 
 ---
 
@@ -234,7 +234,7 @@ This section focuses on the usage and explanation of V2V component which is base
 3. You should set the Map name as the map you want to load, port as the server port (usually set as 7777) and check Enable Listen server while keeping the desired value of absolute. 
 
 > 📷 Host Server:
-> ![Host Server](images/HostServer.png)
+> ![Host Server](Images/HostServer.png)
 
 ---
 
@@ -245,7 +245,7 @@ This section focuses on the usage and explanation of V2V component which is base
 3. The IP should be your external IP which you can get via another function explained next. 
 
 > 📷 Join Server:
-> ![Join Server](images/JoinServer.png)
+> ![Join Server](Images/JoinServer.png)
 
 ---
 
@@ -256,7 +256,7 @@ This section focuses on the usage and explanation of V2V component which is base
 3. When it is called anytime after that it returns the previously received external IP. 
 
 > 📷 Get External IP:
-> ![Get External IP](images/GetExternalIP.png)
+> ![Get External IP](Images/GetExternalIP.png)
 
 --- 
 
@@ -273,7 +273,7 @@ The **BPC_V2VPlayerSessionController** is a blueprint component that should be a
 3. In the event graph, hook **OnPostLogin** and **OnLogout** to the ones in **BPC_V2VPlayerSessionController** as shown below:
 
 > 📷 Game Mode Setup:
-> ![Game Mode](images/GameModeSetup.png)
+> ![Game Mode](Images/GameModeSetup.png)
 
 ---
 
@@ -282,7 +282,7 @@ The **BPC_V2VPlayerSessionController** is a blueprint component that should be a
 **OnPostLogin** takes 1 input i.e. the player controller of the joining player. It adds the **new player** to the **Players Array**.
 
 > 📷 On Post Login:
-> ![On Post Login](images/OnPostLogin.png)
+> ![On Post Login](Images/OnPostLogin.png)
 
 ---
 
@@ -291,7 +291,7 @@ The **BPC_V2VPlayerSessionController** is a blueprint component that should be a
 **OnLogout** takes 1 input i.e. the player controller of the logged out player. It removes the **Logged Out Player** from the **Players Array**.
 
 > 📷 On Logout:
-> ![On Logout ](images/OnLogout.png)
+> ![On Logout ](Images/OnLogout.png)
 
 ---
 
@@ -303,4 +303,4 @@ The **BPC_V2VPlayerSessionController** is a blueprint component that should be a
 4. The **Kick Player** function is from the **Advanced Sessions** Library that takes 2 inputs i.e. the **PlayerController** of the player to kick and **Kick Reason** as text, and 1 bool output which returns whether the kick was successful or not. 
 
 > 📷 Kick Player By Index:
-> ![Kick Player By Index ](images/KickPlayerByIndex.png)
+> ![Kick Player By Index ](Images/KickPlayerByIndex.png)
