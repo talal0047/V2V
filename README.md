@@ -24,7 +24,7 @@ You can install the plugin by either cloning it or downloading it as a ZIP.
 ### ✅ Option A: Clone via Git
 
 ```bash
-git clone https://github.com/your-username/V2V.git
+git clone https://github.com/talal0047/V2V.git
 ```
 
 Then move the `V2V` folder to your Unreal project’s `Plugins` directory:
@@ -35,7 +35,7 @@ mv V2V /YourUEProject/Plugins/
 
 ### ✅ Option B: Download ZIP
 
-1. Visit the plugin's [GitHub page](https://github.com/your-username/V2V).
+1. Visit the plugin's [GitHub page](https://github.com/talal0047/V2V).
 2. Click the green **Code** button → **Download ZIP**.
 3. Extract the ZIP.
 4. Move the extracted `V2V` folder into your project’s `Plugins` directory:
