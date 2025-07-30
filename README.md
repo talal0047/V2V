@@ -7,7 +7,7 @@ This plugin uses UPnP port forwarding to host servers. Only use this plugin if y
 
 ## Prerequisites:
 
-This plugin requires the advanced sessions plugin which you can download from any of these sources:
+If you want to use the Kick functionality then you must get the advanced sessions plugin which you can download from any of these sources:
 
 Advanced Session Binaries: https://vreue4.com/advanced-sessions-binaries
 
@@ -115,7 +115,9 @@ If installed via ZIP, replace the plugin folder and repeat the build steps.
 
 # V2V Plugin Example Usage (You can skip this section if you wan't to do your own implementation)
 
-This setup will guide you how to use the example included in the plugin. 
+This setup will guide you how to use the example included in the plugin.
+
+*note: If you don't want to use the kick functionality, you can skip **Step 3A** and **Step 4***
 
 ## Step 1: Open the Example map
 
@@ -137,11 +139,11 @@ This setup will guide you how to use the example included in the plugin.
    
 ---
 
-## Step 3: Hooking events
+## Step 3: Hooking events 
 
 Now you need to hook some events with your gamemode and game instance
 
-### Game Mode: 
+### Step 3A Game Mode: (For Kick Functionality, requires Advanced Session Plugin)
 1. Open your target map Game Mode 
 2. Add **BPC_V2VPlayerSessionController** Component.
 3. In the event graph, hook **OnPostLogin** and **OnLogout** to the ones in **BPC_V2VPlayerSessionController** as shown below:
@@ -150,7 +152,7 @@ Now you need to hook some events with your gamemode and game instance
 > ![Game Mode](Images/GameModeSetup.png)
 
 
-### Game Instance:
+### Step 3B Game Instance:
 1. Open your target map Game Instance 
 2. In the event graph, add the **Event Shutdown** note, then get actor of class (**BP_Example_ServerConnection**) and from it, call the **OnGameShutdown** event. See the image below:
 
@@ -159,7 +161,7 @@ Now you need to hook some events with your gamemode and game instance
 
 ---
 
-## Step 4: Setting Up Kick Player UI
+## Step 4: Setting Up Kick Player UI (Requires Advanced Session Plugin)
 
 1. In the blurprints folder there's an actor **BP_Example_KickPlayerMenuController** that handles the kick player Ui, open it.
 2. If you are using using VR, set the isVR bool in variables as true, otherwise set it to false. 
